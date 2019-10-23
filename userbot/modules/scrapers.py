@@ -411,7 +411,7 @@ async def imdb(e):
                      link_preview=True,
                      parse_mode='HTML')
     except IndexError:
-        await e.edit("Plox enter **Valid movie name** kthx")
+        await e.edit("`Invaild Movie/Tv Show Name`")
 
 
 @register(outgoing=True, pattern=r"^.trt(?: |$)([\s\S]*)")

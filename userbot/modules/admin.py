@@ -595,9 +595,9 @@ async def rm_deletedacc(show):
             \nCHAT: {show.chat.title}(`{show.chat_id}`)")
 
 
-@register(outgoing=True, pattern="^.admins$", groups_only=True)
+@register(outgoing=True, pattern="^.adminlist$", groups_only=True)
 async def get_admin(show):
-    """ For .admins command, list all of the admins of the chat. """
+    """ For .adminlist command, list all of the admins of the chat. """
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "this chat"
     mentions = f'<b>Admins in {title}:</b> \n'
@@ -629,9 +629,9 @@ async def get_admin(show):
         remove("adminlist.txt")
 
 
-@register(outgoing=True, pattern="^.bots$", groups_only=True)
+@register(outgoing=True, pattern="^.botlist$", groups_only=True)
 async def get_bots(show):
-    """ For .bots command, list all of the bots of the chat. """
+    """ For .botlist command, list all of the bots of the chat. """
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "this chat"
     mentions = f'<b>Bots in {title}:</b>\n'
@@ -754,9 +754,9 @@ async def kick(usr):
             f"CHAT: {usr.chat.title}(`{usr.chat_id}`)\n")
 
 
-@register(outgoing=True, pattern="^.users ?(.*)", groups_only=True)
+@register(outgoing=True, pattern="^.userlist ?(.*)", groups_only=True)
 async def get_users(show):
-    """ For .users command, list all of the users in a chat. """
+    """ For .userlist command, list all of the users in a chat. """
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "this chat"
     mentions = 'Users in {}: \n'.format(title)
@@ -864,11 +864,11 @@ CMD_HELP.update({
 \nUsage: Removes the person from the global mute list.\
 \n\n.delusers\
 \nUsage: Searches for deleted accounts in a group. Use .delusers clean to remove deleted accounts from the group.\
-\n\n.admins\
+\n\n.adminlist\
 \nUsage: Retrieves a list of admins in the chat.\
-\n\n.bots\
+\n\n.botlist\
 \nUsage: Retrieves a list of bots in the chat.\
-\n\n.users or .users <search query>\
+\n\n.userlist or .userlist <search query>\
 \nUsage: Retrieves all (or queried) users in the chat.\
 \n\n.setgpic <reply to image>\
 \nUsage: Changes the group's display picture."

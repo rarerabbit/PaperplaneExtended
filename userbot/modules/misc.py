@@ -93,14 +93,14 @@ async def bot_support(wannahelp):
 
 @register(outgoing=True, pattern="^.creator$")
 async def creator(e):
-    await e.edit("[AvinashReddy3108](https://t.me/AvinashReddy3108)")
+    await e.edit("The Owner Of This Repo Is [noobvishal](https://t.me/noobvishal)")
 
 
 @register(outgoing=True, pattern="^.readme$")
 async def reedme(e):
     await e.edit(
         "Here's something for you to read:\n"
-        "\n[Paperplane Extended's README.md file](https://github.com/AvinashReddy3108/PaperplaneExtended/blob/sql-extended/README.md)"
+        "\n[Paperplane Extended's README.md file](https://github.com/noobvishal/PaperplaneExtended/blob/sql-extended/README.md)"
         "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-07-24)"
         "\n[Setup Guide - Google Drive](https://telegra.ph/How-To-Setup-GDrive-07-27)"
         "\n[Setup Guide - LastFM Module](https://telegra.ph/How-to-set-up-LastFM-module-for-Paperplane-userbot-08-10)"
@@ -126,7 +126,7 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
-        "Click [here](https://github.com/AvinashReddy3108/PaperplaneExtended) to open Paperplane Extended's GitHub page."
+        "Click [here](https://github.com/noobvishal/PaperplaneExtended) to open Paperplane Extended's GitHub page."
     )
 
 

@@ -266,7 +266,7 @@ async def resize_photo(photo):
     return image
 
 
-@register(outgoing=True, pattern="^.stkrinfo$")
+@register(outgoing=True, pattern="^.stickerinfo$")
 async def get_pack_info(event):
     if not event.is_reply:
         await event.edit("`I can't fetch info from nothing, can I ?!`")
@@ -319,6 +319,6 @@ CMD_HELP.update({
 \nUsage: Kang's the sticker/image to the specified pack but uses 🤔 as emoji.\
 \n\n.kang [emoji('s)] [number]\
 \nUsage: Kang's the sticker/image to the specified pack and uses the emoji('s) you picked.\
-\n\n.stkrinfo\
+\n\n.stickerinfo\
 \nUsage: Gets info about the sticker pack."
 })
