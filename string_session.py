@@ -6,8 +6,8 @@ Login using your Telegram account
 Click on API Development Tools
 Create a new application, by entering the required details""")
 
-API_KEY = input("API_KEY: ")
-API_HASH = input("API_HASH: ")
+API_KEY = input("API_KEY: "1192670)
+API_HASH = input("API_HASH: "da7951a6e40360a1c0c0159766eafcf0)
 
 with TelegramClient(StringSession(), API_KEY, API_HASH) as client:
     print("Here is your userbot srting, copy it to a safe place !!")
